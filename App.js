@@ -1,5 +1,5 @@
 
-import { StyleSheet, TextInput, View ,Text,Alert,Button} from 'react-native';
+import { StyleSheet, TextInput, View ,Text,Alert,Button,ScrollView} from 'react-native';
 import { useState } from 'react';
 
 
@@ -10,8 +10,8 @@ const App=()=> {
     Alert.alert(text);
   }
 
-  return (
-    <View ><TextInput 
+return (
+<View ><TextInput 
     style={styles.textInput}
     value={text}
     onChangeText={setText}
@@ -23,8 +23,11 @@ const App=()=> {
     alertMyText();
   }}
   title="Press Me"
-/>
-    </View>
+  />
+  <ScrollView>
+     <Text style={{fontSize:110}}>This text is so big! And so long! You have to scroll!</Text>
+  </ScrollView>
+</View>
     
   );
 }
