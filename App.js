@@ -13,6 +13,11 @@ const App=()=> {
     placeholder='React-Native'
   />
   <Text style={styles.textDisplay}>You wrote: {text}</Text>
+  <Button onPress={() => {
+    alertMyText();
+  }}
+  title="Press Me"
+/>
     </View>
     
   );
