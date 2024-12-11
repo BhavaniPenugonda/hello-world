@@ -1,19 +1,25 @@
 
-import { StyleSheet, TextInput, View ,Text} from 'react-native';
+import { StyleSheet, TextInput, View ,Text,Alert,Button} from 'react-native';
 import { useState } from 'react';
 
 
 const App=()=> {
   const [text, setText] = useState('');
+  // alert the user input (`text` state's value)
+  const alertMyText = () => {
+    Alert.alert(text);
+  }
+
   return (
     <View ><TextInput 
     style={styles.textInput}
     value={text}
     onChangeText={setText}
-    placeholder='React-Native'
+    placeholder='Type Something Here'
   />
   <Text style={styles.textDisplay}>You wrote: {text}</Text>
   <Button onPress={() => {
+    
     alertMyText();
   }}
   title="Press Me"
